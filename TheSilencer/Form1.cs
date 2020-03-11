@@ -12,7 +12,7 @@ namespace TheSilencer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // ange namn och version som titel
+            // display the name and version as the forms title
             this.Text = "The Silencer - v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             this.Text += " (" + System.IO.File.GetLastWriteTime(System.Reflection.Assembly.GetExecutingAssembly().Location).ToString("yyyy-MM-dd") + ")";
         }
