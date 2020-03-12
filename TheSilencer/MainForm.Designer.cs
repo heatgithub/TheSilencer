@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.txtBox = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBox
@@ -37,18 +38,31 @@
             this.txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBox.Location = new System.Drawing.Point(12, 12);
+            this.txtBox.Location = new System.Drawing.Point(12, 41);
             this.txtBox.Multiline = true;
             this.txtBox.Name = "txtBox";
             this.txtBox.ReadOnly = true;
-            this.txtBox.Size = new System.Drawing.Size(776, 426);
+            this.txtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtBox.Size = new System.Drawing.Size(776, 397);
             this.txtBox.TabIndex = 0;
+            this.txtBox.TabStop = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(12, 12);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 1;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.txtBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(600, 400);
@@ -64,6 +78,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtBox;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 
