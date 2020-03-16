@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AudioSwitcher.AudioApi.CoreAudio;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace TheSilencer
             Advertisement,
             Unknown
         }
+        CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
 
 
         /// <summary>
@@ -38,12 +40,9 @@ namespace TheSilencer
 
             // enter default values
             textBoxMusicProgram.Text = "Visual Studio".Substring(7, 1) + '\u0070'.ToString() + 'o'.ToString() + ((char)(232 / 2)).ToString() + "i" + ((char)102).ToString() + ((char)('$' + 'U')).ToString();
-            textBoxDelay.Text = "500";
-
-            // force a refresh
-            //btnRefresh_Click(sender, e);
+            textBoxDelay.Text = "200";
         }
-        
+
 
         /// <summary>
         /// Clicking the Start button
@@ -95,6 +94,7 @@ namespace TheSilencer
             else
             {
                 txtBoxInfo.Text = "Music program not found!";
+                txtBoxInfo.Text += Environment.NewLine;
             }
 
             // unselect everything in the textBox
@@ -117,6 +117,18 @@ namespace TheSilencer
             if (activity == MusicProgramActivity.Playing) { txtBoxInfo.Text += "Now playing: " + musicProgramWindowTitle; }
             if (activity == MusicProgramActivity.Advertisement) { txtBoxInfo.Text += "Advertisement is playing"; }
             if (activity == MusicProgramActivity.Unknown) { txtBoxInfo.Text += "Unknown activity!"; }
+
+            // if advertisment is playing and the volume is not muted, mute!
+            if ((activity == MusicProgramActivity.Advertisement) && (defaultPlaybackDevice.IsMuted == false))
+            {
+                defaultPlaybackDevice.Mute(true);
+            }
+            // if music is playing and the volume is muted, unmute!
+            if ((activity == MusicProgramActivity.Playing) && (defaultPlaybackDevice.IsMuted == true))
+            {
+                defaultPlaybackDevice.Mute(false);
+            }
+
         }
 
 

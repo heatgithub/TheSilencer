@@ -50,7 +50,7 @@
             this.txtBoxInfo.Multiline = true;
             this.txtBoxInfo.Name = "txtBoxInfo";
             this.txtBoxInfo.ReadOnly = true;
-            this.txtBoxInfo.Size = new System.Drawing.Size(360, 67);
+            this.txtBoxInfo.Size = new System.Drawing.Size(460, 67);
             this.txtBoxInfo.TabIndex = 6;
             this.txtBoxInfo.TabStop = false;
             // 
@@ -60,7 +60,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelVersion.Location = new System.Drawing.Point(12, 134);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(360, 18);
+            this.labelVersion.Size = new System.Drawing.Size(460, 18);
             this.labelVersion.TabIndex = 7;
             this.labelVersion.Text = "label1";
             this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,7 +100,7 @@
             // buttonStart
             // 
             this.buttonStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStart.Location = new System.Drawing.Point(297, 10);
+            this.buttonStart.Location = new System.Drawing.Point(397, 10);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(75, 23);
             this.buttonStart.TabIndex = 4;
@@ -111,7 +111,7 @@
             // Stop
             // 
             this.Stop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Stop.Location = new System.Drawing.Point(297, 36);
+            this.Stop.Location = new System.Drawing.Point(397, 36);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(75, 23);
             this.Stop.TabIndex = 5;
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 161);
+            this.ClientSize = new System.Drawing.Size(484, 161);
             this.Controls.Add(this.Stop);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.textBoxDelay);
@@ -137,7 +137,7 @@
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.txtBoxInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(400, 200);
+            this.MinimumSize = new System.Drawing.Size(500, 200);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
